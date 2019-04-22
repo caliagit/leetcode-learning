@@ -15,10 +15,9 @@
 
 def twoSum1(nums, target):
     """
-    来源leetcode (https://leetcode.com/problems/two-sum/discuss/17/Here-is-a-Python-solution-in-O(n)-time)
-    :param nums: 
-    :param target: 
-    :return: 
+    字典包含
+    时间复杂度：O（n）
+    空间复杂度：O（1）
     """
     buff_dict = {}
     for i in range(len(nums)):
@@ -30,10 +29,9 @@ def twoSum1(nums, target):
 
 def twoSum2(nums, target):
     """
-    来源微信公众号:五分钟学算法 (https://mp.weixin.qq.com/s/3FyxT7mvxCwI3oesS3ymOg)
-    :param nums: 
-    :param target: 
-    :return: 
+    指针对撞
+    时间复杂度：O（n）
+    空间复杂度：O（1）
     """
     left = 0
     rigth = len(nums) - 1
