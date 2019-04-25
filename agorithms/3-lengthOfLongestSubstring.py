@@ -33,8 +33,9 @@ def lengthOfLongestSubstring(s):
     for i, ch in enumerate(s):
         if ch in dic:                               # 字符再字典中
             res = max(res, i - start)               # 取最长长度（当前子字符串长度与res长度对比）
-            start = max(start, dic[ch] + 1)         # 索引位置位置（向前移动）
+            start = max(start, dic[ch] + 1)         # 更新索引位置（向前移动）
         dic[ch] = i
+        print(dic)
     return max(res, len(s) - start)
 
 
