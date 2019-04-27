@@ -40,10 +40,10 @@ def zigZagConversion(s, numRows):
     cl = [''] * numRows
     index, step = 0, 1
     for x in s:
-        cl[index] += x
-        if index == 0:
+        cl[index] += x              # 将index相同的字符按先后顺序连接起来
+        if index == 0:              # index在首行，需要往下移动，step=1
             step = 1
-        if index == numRows - 1:
+        if index == numRows - 1:    # index在尾行，需要往上移动，step=-1
             step = -1
         index += step
     return ''.join(cl)
