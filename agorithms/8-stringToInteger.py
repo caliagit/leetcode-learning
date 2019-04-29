@@ -44,14 +44,14 @@ def stringToInteger(s):
         return 0
 
     res, i,  = '', 0
-    if s[0] == '-':
-        res = '-'
+    if s[0] == '-' or s[0] == '+':
+        res = s[0]
         i = 1
     while i < len(s) and s[i].isdigit():
         res += s[i]
         i += 1
 
-    if len(res) == 0 or res == '-':
+    if len(res) == 0 or res == '-' or res == '+':
         return 0
 
     res = int(res)
